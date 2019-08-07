@@ -1,6 +1,5 @@
-// pages/me/me.js
+// pages/mine/mine.js
 const app = getApp()
-
 Page({
 
   /**
@@ -10,11 +9,6 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../mine/mine'
-    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -56,6 +50,31 @@ Page({
     })
   },
 
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+  bindViewTap1: function () {
+    wx.navigateTo({
+      url: '../mine1/mine1'
+    })
+  },
+  bindViewTap2: function () {
+    wx.navigateTo({
+      url: '../mine2/mine2'
+    })
+  },
+  bindViewTap3: function () {
+    wx.showModal({
+      title: '温馨提示',
+      content: '权益通道功能暂未开放，敬请期待后续版本哦！',
+    })
+  }
+  ,
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -88,10 +107,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.startPullDownRefresh()
-    setTimeout(() => {
-      wx.stopPullDownRefresh()
-    }, 2000)
+
   },
 
   /**

@@ -1,0 +1,13 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+<image class="image"
+ style='position:absolute;top:30rpx'
+ src='http://10.21.12.57:8860/image/outside.jpg'>
+</image>
+<button bindtap='bindViewTap1' class="button2" style='position:absolute;top:415rpx'>讨论间预约</button>
+<button bindtap='bindViewTap2' class="button2" style='position:absolute;top:615rpx'>舞台预约</button>
+<button bindtap='bindViewTap3' class="button2" style='position:absolute;top:815rpx'>权益通道</button>
+<button class="button0" style='bottom:100rpx;right:0rpx' bindtap='onScroll'>👆</button>
+<text class="bottomtext" style='position:absolute;top:1000rpx'>更多功能，敬请期待~</text>
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode='cover' style='position:absolute;top:400rpx;left:44rpx'></image>
+</view>

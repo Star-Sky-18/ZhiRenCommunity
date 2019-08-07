@@ -1,0 +1,23 @@
+<!--pages/mine1/mine1.wxml-->
+<view class='container'>
+  <image class="image"
+  src='http://10.21.12.57:8860/image/record.jpg'>
+  </image>
+  <block wx:key="{{this}}" wx:for="{{discuss}}">
+  <view class='container2'></view>
+    <view class='container1'>
+      <text class='record' decode="{{true}}" style='color:#b'>&nbsp;&nbsp;&nbsp;讨论间：{{item.num+1}}
+      &nbsp;&nbsp;&nbsp;时间：{{item.date}}&nbsp;&nbsp;&nbsp;{{((item.startTime-item.startTime%4)/4)+6}}:{{(item.startTime%4)*15}}</text><text wx:if="{{item.startTime%4==0}}" class='record' decode="{{true}}" style='color:#b'>0</text><text class='record' decode="{{true}}" style='color:#b'>~{{((item.stopTime-item.stopTime%4)/4)+6}}:{{(item.stopTime%4)*15}}</text><text wx:if="{{item.stopTime%4==0}}" class='record' decode="{{true}}" style='color:#b'>0</text><text class='record' decode="{{true}}" style='color:#b'>
+      &nbsp;&nbsp;&nbsp;活动：{{item.title}}
+      &nbsp;&nbsp;&nbsp;姓名：{{item.name}}&nbsp;&nbsp;&nbsp;学号：{{item.studentNumber}}
+      </text>
+    </view>
+    </block>
+    <button class="button0" style='bottom:100rpx;right:0rpx'
+    bindtap='onScroll'>👆</button>
+    <view class='container2'></view>
+     <text class="bottomtext" >没有更多预约记录了呦~</text>
+     <view class='container2'></view>
+    <button bindtap='bindViewTap1' class="button2" >新建预约</button>
+</view>
+<view class='container2'></view>
