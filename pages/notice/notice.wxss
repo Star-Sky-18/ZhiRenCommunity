@@ -1,0 +1,7 @@
+#titletext{
+  font-size: 70rpx;
+}
+.smalltext{
+  font-size: 30rpx;
+  position: left;
+}

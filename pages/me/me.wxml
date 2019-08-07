@@ -1,0 +1,14 @@
+<view class="userinfo">
+  <button class="button0" style='bottom:100rpx;right:0rpx' bindtap='onScroll'>👆</button>
+  <block id="w" wx:if="{{hasUserInfo || canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    <button bindtap='bindViewTap' class="button1" style='position:absolute;top:20rpx'>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" style='position:absolute;top:16rpx;left:44rpx'></image>
+      <text class="userinfo-nickname" style='position:absolute;top:50rpx;left:250rpx;'>{{userInfo.nickName}}</text>    
+      <image class="image" src="right-arrow-white.png" style='position:absolute;top:69rpx;left:600rpx;'></image>
+    </button>
+  </block>
+  <button class="button2" style='position:absolute;top:260rpx'>设置  Settings</button>
+  <button class="button2" style='position:absolute;top:380rpx' bindtap='contacthandle'>联系我们  Contact Us</button>
+  <button class="button2" style='position:absolute;top:500rpx' bindtap='abouthandle'>关于  About</button>
+  <text class="bottomtext" style='position:absolute;top:620rpx'>更多功能，敬请期待~</text>
+</view>

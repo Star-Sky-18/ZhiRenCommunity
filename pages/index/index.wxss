@@ -1,0 +1,33 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.instructor{
+  color: #7c7c7c;
+  text-align: center;
+
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  text-align: center;
+}
+
+.usermotto {
+  margin-top: 200px;
+  text-align: center;
+}
+.container {
+  background-position-y: -60rpx;
+  background-size: 750rpx;
+  background-image: url('http://192.168.0.102:8860/image/zhiren1.png')
+}

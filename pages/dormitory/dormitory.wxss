@@ -1,0 +1,14 @@
+/* pages/dormitory/dormitory.wxss */
+.section{
+  border: 4rpx solid  rgb(200, 200, 200);
+  background-color: rgb(241, 241, 241);
+  text-align: right;
+}
+.red{
+  background-color: rgb(168, 109, 109);
+  text-align: center;
+}
+.black{
+  background-color: rgb(65, 65, 65);
+  text-align: center;
+}

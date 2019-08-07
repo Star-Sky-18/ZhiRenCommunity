@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#3ab9b3",
+  "navigationBarTitleText": "讨论间预约",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#cccccc",
+  "enablePullDownRefresh": true
+}

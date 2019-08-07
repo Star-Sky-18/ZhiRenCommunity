@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/logs2/logs2",
+    "pages/me/me",
+    "pages/wxml/index",
+    "pages/bookingRoomDetail/bookingRoomDetail",
+    "pages/bookingStageDetail/bookingStageDetail",
+    "pages/booking/booking",
+    "pages/notice/notice",
+    "pages/dormitory/dormitory"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#3ab9b3",
+    "navigationBarTitleText": "致仁社区",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#000000",
+    "backgroundColor": "#3ab9b3",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/home-1.png",
+        "selectedIconPath": "./images/home-2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/me-1.png",
+        "selectedIconPath": "./images/me-2.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+/* pages/home/home.wxss */
+.button0{
+  background: #3ab9b3;
+  margin-top: 1.6vw;
+  margin-bottom: 0vw;
+  display: flex;
+  z-index: 99; 
+  flex-direction: row;
+  position: fixed;
+  bottom: 0
+}
+.slide-image{
+  width: 750rpx;
+  height: 422rpx
+}
+.post-image{
+  width: 750rpx;
+  height: 422rpx
+}
+.button1{
+  /* background: #d6f3f1; */
+  /* border-color: #ffffff; */
+  width: 250rpx;
+  height:250rpx;
+  background-size: 250rpx 250rpx;
+  background-repeat:no-repeat;
+  border:none;
+}
+.button1::after{
+  border: none
+}
+.button-image{
+  width: 220rpx;
+  height: 220rpx;
+}
+.button2{
+  width: 750rpx;
+  height: 120rpx;
+}

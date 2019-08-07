@@ -1,0 +1,4 @@
+<!--pages/dormitory/dormitory.wxml-->
+<view class='red' style='position:absolute;top:0rpx;left:0rpx;width:375rpx;height:75rpx'>红榜</view>
+<view class='black' style='position:absolute;top:0rpx;right:0rpx;width:375rpx;height:75rpx'>黑榜</view>
+<view class='section' style='position:fixed;bottom:0rpx;width:750rpx'>数据更新日期：YYYY/MM/DD</view>

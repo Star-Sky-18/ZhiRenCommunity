@@ -1,0 +1,8 @@
+<!--logs2.wxml-->
+<button class="button" style='bottom:100rpx;right:0rpx' bindtap='onScroll'>👆</button>
+<view class="container log-list">
+  <text>登录日志</text>
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
