@@ -65,7 +65,7 @@ Page({
       console.log("The user wants to book discuss room" + (e.target.dataset.number + 1) + "!");
       app.roomNumber = parseInt(e.target.dataset.number);
       wx.request({
-        url: app.serviceurl,
+        url: app.globalData.serviceurl,
         data: {
           request: 'getInfoOfAllDis',
           info: {}
@@ -85,7 +85,7 @@ Page({
   onShow: function(){
     var a = this;
     wx.request({
-      url: app.serviceurl,
+      url: app.globalData.serviceurl,
       data: {
         request: 'getInfoOfAllDis',
         info: {}

@@ -148,7 +148,7 @@ Page({
     else if(result[6].obj.length == 8 && result[8].obj.length == 11){
       console.log(result[0].obj + "\n" + result[1].obj + "\n" + result[2].obj + "\n" + result[5].obj + "\n" + result[6].obj + "\n" + result[7].obj + "\n" + result[8].obj + "\n" + result[3].obj + "\n"  + result[4].obj + "\n" )
     wx.request({
-      url: app.serviceurl,
+      url: app.globalData.serviceurl,
       data: {
         request: 'appointDis',
         info: {
@@ -188,7 +188,7 @@ Page({
             showCancel: false
           })
           wx.request({
-            url: app.serviceurl,
+            url: app.globalData.serviceurl,
             data: {
               request: 'getInfoOfAllDis',
               info: {}

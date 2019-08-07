@@ -1,4 +1,5 @@
 // pages/mine2/mine2.js
+const app = getApp()
 Page({
 
   /**
@@ -14,11 +15,11 @@ act: [],
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://10.21.12.57:8860',
+      url: app.globalData.serviceurl,
       data: {
         request: 'infoOfUser',
         info: {
-          user: 'S3E'
+          user: 'Star Sky'
         }
       },
       success: function (res) {
@@ -91,7 +92,7 @@ act: [],
       index: 0,
     })
     wx.request({
-      url: 'http://10.21.12.57:8860',
+      url: app.globalData.serviceurl,
       data: {
         request: 'getInforOfDis',
         infor: {

@@ -1,4 +1,5 @@
 // pages/mine1/mine1.js
+const app = getApp()
 Page({
 
   /**
@@ -14,11 +15,11 @@ discuss: [],
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url:'http://10.21.12.57:8860',
+      url:app.globalData.serviceurl,
       data:{
         request:'infoOfUser',
         info:{
-          user:'S3E'
+          user:'Star Sky'
         }
       },
       success:function(res){
@@ -42,7 +43,23 @@ discuss: [],
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    wx.request({
+      url: app.globalData.serviceurl,
+      data: {
+        request: 'infoOfUser',
+        info: {
+          user: 'Star Sky'
+        }
+      },
+      success: function (res) {
+        // console.log(res.data)
+        that.setData({
+          discuss: res.data.appointmentOfDis
+        })
+        console.log(that.data.discuss)
+      }
+    })
   },
 
   /**
@@ -91,10 +108,10 @@ discuss: [],
       index: 0,
     })
     wx.request({
-      url: 'http://10.21.12.57:8860',
+      url: app.globalData.serviceurl,
       data: {
-        request: 'getInforOfDis',
-        infor: {
+        request: 'getInfoOfDis',
+        info: {
           day: 0,
           num: 1,
           title: '',
@@ -109,8 +126,26 @@ discuss: [],
   },
   bindViewTap1: function () {
     wx.navigateTo({
-      url: '../mine1/mine1'
+      url: '../booking/booking'
     })
-  },
+  }, 
+  cancelAppoint: function(e){
+    wx.request({
+      url: app.globalData.serviceurl,
+      data:{
+        request:'cancelAppoint',
+        info:{
+          timestamp:e.currentTarget.id
+        }
+      },
+      success:function(res){
+        wx.showModal({
+          title: '温馨提示',
+          content: '!',
+        })
+        console.log(res.data)
+      }
+    })
+  }
 
 })

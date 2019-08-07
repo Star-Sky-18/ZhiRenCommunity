@@ -46,7 +46,7 @@ App({
 var app = getApp();
 app.globalData.disArray = []
 app.day = [0,1,2];
-app.serviceurl = 'http://192.168.0.102:8860'
+app.globalData.serviceurl = 'http://192.168.0.102:8860'
 app.objectArray = [
   { id: 0, name: '6:00' },
   { id: 1, name: '6:15' },

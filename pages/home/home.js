@@ -88,7 +88,7 @@ Page({
       index: 1,
     })
     wx.request({
-      url: app.serviceurl,
+      url: app.globalData.serviceurl,
       data: {
         request: 'infoOfUser',
         info:{

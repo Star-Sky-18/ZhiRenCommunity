@@ -146,7 +146,7 @@ Page({
     else {
       console.log(result[0].obj + "\n" + result[1].obj + "\n" + result[2].obj + "\n" + result[3].obj + "\n" + result[4].obj + "\n" + result[5].obj + "\n" + result[6].obj + "\n" + result[7].obj + "\n" + result[8].obj)
       wx.request({
-        url: app.serviceurl,
+        url: app.globalData.serviceurl,
         data: {
           request: 'appointActivity',
           info: {

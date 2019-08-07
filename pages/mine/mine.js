@@ -135,7 +135,7 @@ Page({
       index: 0,
     })
     wx.request({
-      url: 'http://10.21.12.57:8860',
+      url: app.globalData.serviceurl,
       data: {
         request: 'getInforOfDis',
         infor: {
