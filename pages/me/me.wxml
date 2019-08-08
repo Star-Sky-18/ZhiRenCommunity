@@ -8,7 +8,7 @@
     </button>
   </block>
   <button class="button2" style='position:absolute;top:260rpx'>设置  Settings</button>
-  <button class="button2" style='position:absolute;top:380rpx'>联系我们  Contact Us</button>
-  <button class="button2" style='position:absolute;top:500rpx'>关于  About</button>
+  <button class="button2" style='position:absolute;top:380rpx' bindtap='contacthandle'>联系我们  Contact Us</button>
+  <button class="button2" style='position:absolute;top:500rpx' bindtap='abouthandle'>关于  About</button>
   <text class="bottomtext" style='position:absolute;top:620rpx'>更多功能，敬请期待~</text>
 </view>

@@ -7,7 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: app.globalData.serviceurl,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -119,21 +118,19 @@ Page({
     wx.hideTabBarRedDot({
       index: 0,
     })
-    wx.request({
-      url: app.globalData.serviceurl,
-      data: {
-        request: 'getInforOfDis',
-        infor: {
-          day: 0,
-          num: 1,
-          title: '',
-          startTime: 0,
-          stopTime: 120
-        }
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
+  },
+  contacthandle: function () {
+    wx.showModal({
+      title: '联系我们',
+      content: '如有任何疑问、意见或建议，欢迎联系致仁自管会生活权益部。\r\n联系邮箱：11812333@mail.sustech.edu.cn',
+      showCancel: false
+    })
+  },
+  abouthandle: function () {
+    wx.showModal({
+      title: '关于',
+      content: '版本号： v1.0.0（S3E内测版）\r\n本小程序最终解释权归致仁自管会生活权益部所有。',
+      showCancel: false
     })
   }
 })
