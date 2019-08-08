@@ -1,7 +1,7 @@
 <!--pages/mine2/mine2.wxml-->
 <view class='container'>
   <image class="image"
-  src='http://192.168.0.102:8860/image/record.jpg'>
+  src='{{url}}/image/record.jpg'>
   </image>
   <block wx:for="{{act}}">
   <view class='container2'></view>

@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <button class="button0" style='bottom:100rpx;right:0rpx' bindtap='onScroll'>👆</button>
 <view class='section'>
-  <image class="post-image" src='http://192.168.0.102:8860/image/zhiren2.png'></image>
+  <image class="post-image" src='{{url}}/image/zhiren2.png'></image>
 </view>
 <view class='section'>
   <image class="button1" style='position:relative;top:0rpx;left:0rpx;' src='./room.jpg' bindtap='tapForRoom'/>

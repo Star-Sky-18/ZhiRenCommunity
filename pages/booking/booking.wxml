@@ -1,5 +1,5 @@
 <view class="container">
-  <image id='picture' src='http://192.168.0.102:8860/image/discussRoom.jpg'></image>
+  <image id='picture' src='{{url}}/image/discussRoom.jpg'></image>
   <text id='titletext'>讨论间预约</text>
   <checkbox bindtap='changeAgreedStat'>
     <text id='noticetext' catchtap='showNotice'>我已阅读并同意服从《致仁活动室管理规定》</text>

@@ -5,6 +5,7 @@ const app = getApp()
 
 Page({
   data: {
+    url: app.globalData.serviceurl,
     motto: '欢迎使用致仁社区~\nWelcome~',
     userInfo: {},
     hasUserInfo: false,

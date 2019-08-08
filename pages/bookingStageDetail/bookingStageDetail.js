@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url: app.globalData.serviceurl,
     utils: utils,
     startDate: utils.addDay2(1),
     endDate: utils.addMonth(1),

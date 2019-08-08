@@ -1,8 +1,9 @@
 //logs2.js
 const util = require('../../utils/util.js')
-
+const app = getApp()
 Page({
   data: {
+    url: app.globalData.serviceurl,
     logs: []
   },
   onLoad: function () {

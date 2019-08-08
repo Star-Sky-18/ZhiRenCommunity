@@ -1,7 +1,7 @@
 <!--pages/mine1/mine1.wxml-->
 <view class='container'>
   <image class="image"
-  src='http://192.168.0.102:8860/image/record.jpg'>
+  src='{{url}}/image/record.jpg'>
   </image>
   <block wx:key="{{this}}" wx:for="{{discuss}}">
   <view class='container2'></view>
@@ -11,7 +11,7 @@
       &nbsp;&nbsp;&nbsp;活动：{{item.title}}
       &nbsp;&nbsp;&nbsp;姓名：{{item.name}}&nbsp;&nbsp;&nbsp;学号：{{item.studentNumber}}
       </text>
-    <image id="{{item.timestamp}}" bindtap='cancelAppoint'class="cancel" src = "http://192.168.0.102:8860/image/cancel.png" style="position:relative;left:25rpx"/>
+    <image id="{{item.timestamp}}" bindtap='cancelAppoint'class="cancel" src = "{{url}}/image/cancel.png" style="position:relative;left:25rpx"/>
     </view>
     </block>
     <button class="button0" style='bottom:100rpx;right:0rpx'

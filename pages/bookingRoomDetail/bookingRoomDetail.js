@@ -17,6 +17,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url: app.globalData.serviceurl,
     startTimeIndex: startTimeIndex,
     endTimeIndex: endTimeIndex,
     startTimeArray: startTimeArray,

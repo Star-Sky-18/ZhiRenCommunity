@@ -3,6 +3,7 @@ var app = getApp()
 app.day = 0
 Page({
   data: {
+    url: app.globalData.serviceurl,
     isAgree: false,
     discussRoom: [1,2,3,4],
     day1: utils.addDay1(0),

@@ -2,7 +2,7 @@
 <view class='container'>
 <image class="image"
  style='position:absolute;top:30rpx'
- src='http://192.168.0.102:8860/image/outside.jpg'>
+ src='{{url}}/image/outside.jpg'>
 </image>
 <button bindtap='bindViewTap1' class="button2" style='position:absolute;top:415rpx'>讨论间预约</button>
 <button bindtap='bindViewTap2' class="button2" style='position:absolute;top:615rpx'>舞台预约</button>
