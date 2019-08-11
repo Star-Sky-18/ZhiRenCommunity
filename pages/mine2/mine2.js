@@ -111,7 +111,7 @@ Page({
   },
   bindViewTap1: function() {
     wx.navigateTo({
-      url: '../mine1/mine1'
+      url: '../bookingStageDetail/bookingStageDetail'
     })
   }
 })

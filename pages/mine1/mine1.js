@@ -58,7 +58,6 @@ Page({
         that.setData({
           discuss: res.data.appointmentOfDis
         })
-        console.log(that.data.discuss)
       }
     })
   },
@@ -97,33 +96,13 @@ Page({
   onShareAppMessage: function() {
 
   },
+
   onScroll: function() {
     wx.pageScrollTo({
       scrollTop: 0,
       duration: 300
     })
-    wx.showTabBarRedDot({
-      index: 1,
-    })
-    wx.hideTabBarRedDot({
-      index: 0,
-    })
-    wx.request({
-      url: app.globalData.serviceurl,
-      data: {
-        request: 'getInfoOfDis',
-        info: {
-          day: 0,
-          num: 1,
-          title: '',
-          startTime: 0,
-          stopTime: 120
-        }
-      },
-      success: function(res) {
-        console.log(res.data)
-      }
-    })
+    onShow()
   },
   bindViewTap1: function() {
     wx.navigateTo({
@@ -131,18 +110,24 @@ Page({
     })
   },
   cancelAppoint: function(e) {
+    var that = this
     wx.request({
       url: app.globalData.serviceurl,
       data: {
         request: 'cancelAppoint',
         info: {
-          timestamp: e.currentTarget.id
+          timestamp: e.currentTarget.id,
+          user:'Star Sky'
         }
       },
       success: function(res) {
         wx.showModal({
           title: '温馨提示',
-          content: '!',
+          content: res.data.reason==''? '您已取消题为'+res.data.result[0].title+'\n 开始时间为'+app.objectArray[res.data.result[0].startTime].name+'\n 结束时间为'+app.objectArray[res.data.result[0].stopTime].name+'的预约':'取消失败，不存在这条记录',
+          showCancel:false,
+          success:function(){
+            that.onShow()
+          }
         })
         console.log(res.data)
       }
