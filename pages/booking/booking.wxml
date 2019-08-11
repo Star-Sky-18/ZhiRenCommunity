@@ -6,50 +6,11 @@
   </checkbox>
 
   <view style='height:20rpx;width:700rpx;background-color:#ffffff'></view>
-  <text class='sorry'>当前页面暂仅支持iPhone用户访问</text>
-  <text class='sorry'>如对您造成不便，敬请谅解</text>
-
   <block wx:for="{{discussRoom}}" wx:for-index="i">
     <view style='height:50rpx;width:700rpx;background-color:#ffffff'></view>
     <text class='smalltext'>讨论间{{i+1}} （2~4人讨论间）</text>
 
-    <view class='timetable'>
-      <!-- <view style='background-color: rgba(0, 0, 255, 0.5); width: 15rpx; height: 12rpx;'></view> -->
-
-      <!-- version1 -->
-      <block wx:for="{{discussRoom[i][currentDay][0]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][0][j]}}" style='position: relative; left: {{30 * j + 15}}rpx; top: {{12 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0.45); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{(30 * j + 15)}}rpx; top: {{12 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0); width: 30rpx; height: 80rpx;'></view>
-      </block>
-
-      <block wx:for="{{discussRoom[i][currentDay][1]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][1][j]}}" style='position: relative; left: {{30 * j + 15}}rpx; top: {{-1770 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0.45); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{(30 * j + 15)}}rpx; top: {{-1770 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0); width: 30rpx; height: 80rpx;'></view>
-      </block>
-
-       <block wx:for="{{discussRoom[i][currentDay][2]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][2][j]}}" style='position: relative; left: {{30 * j + 15}}rpx; top: {{-3552 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0.45); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{(30 * j + 15)}}rpx; top: {{-3552 - 80 * j}}rpx; background-color: rgba(0, 0, 255, 0); width: 30rpx; height: 80rpx;'></view>
-      </block>
-
-      <!-- version2 -->
-      <!-- <block wx:for="{{discussRoom[i][currentDay][0]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][0][j]}}" style='position: relative; left: {{15}}rpx; top: {{13}}rpx; background-color: rgba(0, 0, 255, 0.65); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{15}}rpx; top: {{13}}rpx; background-color: rgba(0, 0, 255, 0.5); width: 30rpx; height: 80rpx;'></view>
-      </block> -->
-
-      <!-- <block wx:for="{{discussRoom[i][currentDay][1]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][1][j]}}" style='position: relative; left: {{15}}rpx; top: {{152}}rpx; background-color: rgba(0, 0, 255, 0.65); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{15}}rpx; top: {{152}}rpx; background-color: rgba(0, 0, 255, 0.25); width: 30rpx; height: 80rpx;'></view>
-      </block> -->
-
-      <!-- <block wx:for="{{discussRoom[i][currentDay][0]}}" wx:for-index="j">
-        <view wx:if="{{discussRoom[i][currentDay][0][j]}}" style='position: relative; left: {{15}}rpx; top: {{12}}rpx; background-color: rgba(0, 0, 255, 0.65); width: 30rpx; height: 80rpx;'></view>
-        <view wx:else style='position: relative; left: {{15}}rpx; top: {{12}}rpx; background-color: rgba(0, 0, 255, 0.25); width: 30rpx; height: 80rpx;'></view>
-      </block> -->
-        <!-- <view style='background-color: rgba(255, 0, 0, 0.5); width: 30rpx; height: 80rpx;'></view> -->
-      <!-- <view style='position: relative; top: 13rpx; left: 15rpx; background-color: rgba(255, 0, 0, 0.5); width: 90rpx; height: 80rpx;'></view> -->
-    </view>
+    <image class='timetable' src='{{url}}/image/bookingImage/bI{{i+""+currentDay}}.png' ></image>
 
     <view style='height:10rpx;width:700rpx;background-color:#ffffff'></view>
     <button bindtap='book' data-number='{{i}}'>立即预约</button>
