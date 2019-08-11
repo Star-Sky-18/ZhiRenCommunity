@@ -4,7 +4,6 @@
     "pages/home/home",
     "pages/logs2/logs2",
     "pages/me/me",
-    "pages/wxml/index",
     "pages/bookingRoomDetail/bookingRoomDetail",
     "pages/bookingStageDetail/bookingStageDetail",
     "pages/booking/booking",
