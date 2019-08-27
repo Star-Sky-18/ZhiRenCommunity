@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:app.globalData.serviceurl,
+    url: app.globalData.serviceurl,
     discuss: [],
   },
 
@@ -111,27 +111,36 @@ Page({
   },
   cancelAppoint: function(e) {
     var that = this
-    wx.request({
-      url: app.globalData.serviceurl,
-      data: {
-        request: 'cancelAppoint',
-        info: {
-          timestamp: e.currentTarget.id,
-          user:'Star Sky'
+    wx.showModal({
+      title: '确认取消',
+      content: '请确认要取消预约吗，一旦取消不可更改！',
+      success: function(e) {
+        if (e.confirm) {
+          wx.request({
+            url: app.globalData.serviceurl,
+            data: {
+              request: 'cancelAppoint',
+              info: {
+                timestamp: e.currentTarget.id,
+                user: 'Star Sky'
+              }
+            },
+            success: function(res) {
+              wx.showModal({
+                title: '温馨提示',
+                content: res.data.reason == '' ? '您已取消题为' + res.data.result[0].title + '\n 开始时间为' + app.objectArray[res.data.result[0].startTime].name + '\n 结束时间为' + app.objectArray[res.data.result[0].stopTime].name + '的预约' : '取消失败，不存在这条记录',
+                showCancel: false,
+                success: function() {
+                  that.onShow()
+                }
+              })
+              console.log(res.data)
+            }
+          })
         }
-      },
-      success: function(res) {
-        wx.showModal({
-          title: '温馨提示',
-          content: res.data.reason==''? '您已取消题为'+res.data.result[0].title+'\n 开始时间为'+app.objectArray[res.data.result[0].startTime].name+'\n 结束时间为'+app.objectArray[res.data.result[0].stopTime].name+'的预约':'取消失败，不存在这条记录',
-          showCancel:false,
-          success:function(){
-            that.onShow()
-          }
-        })
-        console.log(res.data)
       }
     })
+
   }
 
 })

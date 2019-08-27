@@ -171,7 +171,7 @@ Page({
           wx.showModal({
             title: 'SUCCESS',
             content: '预约成功。',
-            confirmText: '返回上层',
+            confirmText: '返回',
             showCancel: false,
             success (res) {
               if (res.confirm) {
