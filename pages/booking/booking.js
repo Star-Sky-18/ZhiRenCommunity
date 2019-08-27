@@ -84,7 +84,6 @@ Page({
     }
   },
   onShow: function(){
-    
   },
   onPullDownRefresh: function(){
     wx.showNavigationBarLoading();

@@ -41,5 +41,6 @@
   font-size: 20rpx
 }
 .cancel{
-  height: 100rpx
+  height: 100rpx;
+  width:650rpx
 }

@@ -176,7 +176,7 @@ Page({
             success (res) {
               if (res.confirm) {
                 wx.navigateBack({
-                  delta: 0,
+                  delta: 2,
                 })
               }
             }
