@@ -8,11 +8,7 @@ Page({
    */
   data: {
     url: app.globalData.serviceurl,
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
+    imgUrls: app.globalData.slashes,
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
@@ -37,7 +33,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      imgUrls:app.globalData.slashes
+    })
   },
 
   /**
@@ -109,6 +107,12 @@ Page({
   tapForStage: function () {
     wx.navigateTo({
       url: '../bookingStageDetail/bookingStageDetail',
+    })
+  },
+  tapForQuanyi: function () {
+    wx.showModal({
+      title: '温馨提示',
+      content: '权益通道功能暂未开放，敬请期待后续版本哦！',
     })
   },
   dormhandle: function () {

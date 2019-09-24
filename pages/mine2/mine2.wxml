@@ -14,6 +14,7 @@
       &nbsp;&nbsp;&nbsp;活动内容：{{item.content.slice(1,5)}}...</text><text class='record' decode="{{true}}" style='color:#b'>
       &nbsp;&nbsp;&nbsp;姓名：{{item.name}}&nbsp;&nbsp;&nbsp;学号：{{item.studentNumber}}
       </text>
+    <image id="{{item.timestamp}}" bindtap='cancelAppoint'class="cancel" src = "{{url}}/image/cancel.png" style="position:relative;left:25rpx"/>
     </view>
     </block>
     <button class="button0" style='bottom:100rpx;right:0rpx'

@@ -14,8 +14,8 @@
     <image id="{{item.timestamp}}" bindtap='cancelAppoint'class="cancel" src = "{{url}}/image/cancel.png" style="position:relative;left:25rpx"/>
     </view>
     </block>
-    <button class="button0" style='bottom:100rpx;right:0rpx'
-    bindtap='onScroll'>👆</button>
+    <!-- <button class="button0" style='bottom:100rpx;right:0rpx'
+    bindtap='onScroll'>👆</button> -->
     <view class='container2'></view>
      <text class="bottomtext" >没有更多预约记录了呦~</text>
      <view class='container2'></view>

@@ -46,7 +46,7 @@ App({
 var app = getApp();
 app.globalData.disArray = []
 app.day = [0,1,2];
-app.globalData.serviceurl = 'http://10.21.55.133:8860'
+app.globalData.serviceurl = 'http://10.21.90.47:8860'
 app.objectArray = [
   { id: 0, name: '6:00' },
   { id: 1, name: '6:15' },
@@ -122,3 +122,15 @@ app.objectArray = [
   { id: 71, name: '23:45' },
   { id: 72, name: '23:59' }
 ]
+
+wx.request({
+  url: app.globalData.serviceurl,
+  data:{
+    request:"getSlashes",
+    info:{}
+  },
+  success:function(res){
+    console.log(res)
+    app.globalData.slashes = res.data
+  }
+})

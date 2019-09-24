@@ -8,7 +8,7 @@
 }
 .container1{
   background-color:#d6f3f1;
-  height: 200rpx;
+  height: 300rpx;
   width: 700rpx
 }
 .record{
@@ -39,4 +39,8 @@
 .bottomtext{
   color: #7c7c7c;
   font-size: 20rpx
+}
+.cancel{
+  height: 100rpx;
+  width:650rpx
 }

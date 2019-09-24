@@ -114,8 +114,8 @@ Page({
     wx.showModal({
       title: '确认取消',
       content: '请确认要取消预约吗，一旦取消不可更改！',
-      success: function(e) {
-        if (e.confirm) {
+      success: function(ee) {
+        if (ee.confirm) {
           wx.request({
             url: app.globalData.serviceurl,
             data: {

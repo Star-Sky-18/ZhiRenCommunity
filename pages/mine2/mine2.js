@@ -81,6 +81,12 @@ Page({
   onShareAppMessage: function() {
 
   },
+  cancelAppoint:function(){
+    wx.showModal({
+      title: '温馨提示',
+      content: '取消舞台区活动预约请与活动室管理员联系，邮箱：11812333@mail.sustech.edu.cn',
+    })
+  },
   onScroll: function() {
     wx.pageScrollTo({
       scrollTop: 0,

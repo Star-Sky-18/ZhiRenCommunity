@@ -1,16 +1,7 @@
 <!--pages/home/home.wxml-->
-<button class="button0" style='bottom:100rpx;right:0rpx' bindtap='onScroll'>👆</button>
+<button class="help" style='bottom:900rpx;right:0rpx' bindtap='onScroll'>👆</button>
 <view class='section'>
-  <image class="post-image" src='{{url}}/image/zhiren2.png'></image>
-</view>
-<view class='section'>
-  <image class="button1" style='position:relative;top:0rpx;left:0rpx;' src='./room.jpg' bindtap='tapForRoom'/>
-  <image class="button1" style='position:relative;top:0rpx;left:0rpx;' src='./stage.jpg' bindtap='tapForStage'/>
-  <image class="button1" style='position:relative;top:0rpx;left:0rpx'  src='./quanyi.jpg'/>
-</view>
-<button class='button2' bindtap='dormhandle' style='position:relative;top:0rpx;width:750rpx'>宿舍红黑榜</button>
-<view class='section'>
-  <swiper style='position:relative;top:0rpx;height:422rpx' indicator-dots="{{indicatorDots}}"
+  <swiper style='position:relative;top:0rpx;height:1000rpx' indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
@@ -18,4 +9,16 @@
       </swiper-item>
     </block>
   </swiper>
+</view>
+<view class='button0'>
+  <image class="button1" src='./room.jpg' bindtap='tapForRoom'/>
+  <image class="button1" src='./stage.jpg' bindtap='tapForStage'/>
+  <image class="button1" src='./quanyi.jpg' bindtap="tapForQuanyi"/>
+</view>
+<view id="suspend">
+</view>
+<view class='section'>
+  <image class="post-image" src='{{url}}/image/zhiren2.png'></image>
+</view>
+<view id="perch">
 </view>
