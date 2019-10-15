@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<button class="help" style='bottom:900rpx;right:0rpx' bindtap='onScroll'>❔</button>
+<!-- <button class="help" style='bottom:900rpx;right:0rpx' bindtap='onScroll'>❔</button> -->
 <view class='section'>
   <swiper style='position:relative;top:0rpx;height:1000rpx' indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -11,8 +11,8 @@
   </swiper>
 </view>
 <view class='button0'>
-  <image class="button1" src='{{url}}/image/room.jpg' bindtap='tapForRoom'/>
-  <image class="button1" src='{{url}}/image/stage.jpg' bindtap='tapForStage'/>
+  <image class="button1" src='{{url}}/image/room.jpg' bindtap='tapForSpace'/>
+  <image class="button1" src='{{url}}/image/stage.jpg' bindtap='tapForWupin'/>
   <image class="button1" src='{{url}}/image/quanyi.jpg' bindtap="tapForQuanyi"/>
 </view>
 <view id="suspend">

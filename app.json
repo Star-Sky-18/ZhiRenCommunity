@@ -2,14 +2,18 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
-    "pages/logs2/logs2",
     "pages/me/me",
     "pages/bookingRoomDetail/bookingRoomDetail",
     "pages/bookingStage/bookingStage",
     "pages/bookingStageDetail/bookingStageDetail",
     "pages/booking/booking",
     "pages/notice/notice",
-    "pages/dormitory/dormitory"
+    "pages/dormitory/dormitory",
+    "pages/space/space",
+    "pages/help/help",
+    "pages/bakingroom/bakingroom",
+    "pages/wpjy/wpjy",
+    "pages/quanyi/quanyi"
   ],
   "window": {
     "backgroundTextStyle": "dark",

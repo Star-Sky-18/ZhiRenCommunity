@@ -1,7 +1,7 @@
 // pages/bookingStageDetail/bookingStageDetail.js
 var utils = require('../../utils/util.js')
 const app = getApp()
-var result = [{ id: 0, obj: '' }, { id: 1, obj: '' }, { id: 2, obj: '' }, { id: 3, obj: '' }, { id: 4, obj: '' }, { id: 5, obj: '' }, { id: 6, obj: '' }, { id: 7, obj: '' }, { id: 8, obj: '' }, { id: 9, obj: '' }, { id: 10, obj: 'false' }, { id: 11, obj: 'false' }]
+var result = [{ id: 0, obj: '' }, { id: 1, obj: '' }, { id: 2, obj: '' }, { id: 3, obj: '' }, { id: 4, obj: '' }, { id: 5, obj: '' }, { id: 6, obj: '' }, { id: 7, obj: '' }, { id: 8, obj: '' }, { id: 9, obj: '' }, { id: 10, obj: 'false' }, { id: 11, obj: 'false' }, { id: 12, obj: 'false' }]
 Page({
 
   /**
@@ -35,7 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    result = [{ id: 0, obj: '' }, { id: 1, obj: '' }, { id: 2, obj: '' }, { id: 3, obj: '' }, { id: 4, obj: '' }, { id: 5, obj: '' }, { id: 6, obj: '' }, { id: 7, obj: '' }, { id: 8, obj: '' }, { id: 9, obj: '' }, { id: 10, obj: 'false' }, { id: 11, obj: 'false' }]
+    result = [{ id: 0, obj: '' }, { id: 1, obj: '' }, { id: 2, obj: '' }, { id: 3, obj: '' }, { id: 4, obj: '' }, { id: 5, obj: '' }, { id: 6, obj: '' }, { id: 7, obj: '' }, { id: 8, obj: '' }, { id: 9, obj: '' }, { id: 10, obj: 'false' }, { id: 11, obj: 'false' }, { id: 12, obj: 'false' }]
   },
 
   /**
@@ -101,6 +101,10 @@ Page({
     result[11].obj = e.detail.value
     console.log(result[11].obj)
   },
+  spaceChange: function (e) {
+    result[12].obj = e.detail.value
+    console.log(result[12].obj)
+  },
   contentBlur: function (e) {
     focus1: 'false'
     result[3].obj = e.detail.value
@@ -136,6 +140,11 @@ Page({
     result[9].obj = e.detail.value
     console.log(result[9].obj)
   },
+  showdraft: function () {
+    wx.previewImage({
+      urls: ['{{url}}image/draft.png'],
+    })
+  },
   submit: function () {
     if (result[0].obj == '' || result[1].obj == '' || result[2].obj == '' || result[3].obj == '' || result[4].obj == '' || result[5].obj == '' || result[6].obj == '' || result[7].obj == '' || result[8].obj == '') {
       wx.showModal({
@@ -145,7 +154,6 @@ Page({
       })
     }
     else {
-      console.log(result[0].obj + "\n" + result[1].obj + "\n" + result[2].obj + "\n" + result[3].obj + "\n" + result[4].obj + "\n" + result[5].obj + "\n" + result[6].obj + "\n" + result[7].obj + "\n" + result[8].obj)
       wx.request({
         url: app.globalData.serviceurl,
         data: {
@@ -163,6 +171,7 @@ Page({
             remark: result[9].obj,
             projector: result[10].obj,
             microphone: result[11].obj,
+            space: result[12].obj,
             user: app.globalData.userInfo.nickName
           }
         },
@@ -177,7 +186,7 @@ Page({
               success(res) {
                 if (res.confirm) {
                   wx.navigateTo({
-                    url : '../home/home'
+                    url: '../home/home',
                   })
                 }
               }

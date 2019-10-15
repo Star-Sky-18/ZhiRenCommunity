@@ -132,5 +132,10 @@ Page({
       content: '版本号： v1.0.0（S3E内测版）\r\n本小程序最终解释权归致仁自管会生活权益部所有。',
       showCancel: false
     })
+  },
+  helphandle: function () {
+    wx.navigateTo({
+      url: '../help/help',
+    })
   }
 })

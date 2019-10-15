@@ -1,5 +1,4 @@
-// pages/home/home.js
-
+// pages/space/space.js
 const app = getApp()
 Page({
 
@@ -7,12 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: app.globalData.serviceurl,
-    imgUrls: app.globalData.slashes,
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000
+
   },
 
   /**
@@ -33,9 +27,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      imgUrls:app.globalData.slashes
-    })
+
   },
 
   /**
@@ -56,10 +48,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.startPullDownRefresh()
-    setTimeout(() => {
-      wx.stopPullDownRefresh()
-    }, 2000)
+
   },
 
   /**
@@ -75,34 +64,27 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onScroll: function() {
-    wx.pageScrollTo({
-      scrollTop: 0,
-      duration: 300
+  roomhandle: function () {
+    wx.navigateTo({
+      url: '../booking/booking',
     })
+  },
+  stagehandle: function () {
+    wx.navigateTo({
+      url: '../bookingStage/bookingStage',
+    })
+  },
+  bakinghandle: function() {
     wx.showModal({
-      title: '帮助',
-      content: '暂未开放',
-    })
-  },
-  tapForSpace: function() {
-    wx.navigateTo({
-      url: '../space/space',
-    })
-  },
-  tapForWupin: function () {
-    wx.navigateTo({
-      url: '../wpjy/wpjy',
-    })
-  },
-  tapForQuanyi: function () {
-    wx.navigateTo({
-      url: '../quanyi/quanyi',
-    })
-  },
-  dormhandle: function () {
-    wx.navigateTo({
-      url: '../dormitory/dormitory',
+      title: '温馨提示',
+      content: '烘焙室预约功能仅对致仁烘焙室成员开放。',
+      success(res) {
+        if (res.confirm) {
+          wx.navigateTo({
+            url: '../bakingroom/bakingroom',
+          })
+        }
+      }
     })
   }
 })

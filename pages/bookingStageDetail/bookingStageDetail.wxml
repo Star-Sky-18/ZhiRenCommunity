@@ -47,5 +47,9 @@
   <checkbox-group bindchange='microphoneChange'>
     <checkbox value='true' style='position:relative;top:-15rpx;left:30rpx'>是否需要使用麦克风</checkbox>
   </checkbox-group>
-  <button id='b' bindtap='submit' style='position:relative;top:0rpx;left:150rpx;height:110rpx;width:325rpx'> 提交审核 Submit </button>
+    <checkbox-group bindchange='spaceChange'>
+    <checkbox value='true' style='position:relative;top:0rpx;left:30rpx'>是否需要使用活动室活动区</checkbox>
+    <text id="draft" bindtap="showdraft" style='position:relative;top:0rpx;left:50rpx'>致仁活动室草图</text>
+  </checkbox-group>
+  <button id='b' bindtap='submit' style='position:relative;top:0rpx;left:67.5rpx;height:110rpx;width:325rpx'> 提交审核 Submit </button>
 </view>

@@ -1,0 +1,9 @@
+<!--pages/space/space.wxml-->
+<view class="userinfo">
+  <view class='title' style='position:absolute;top:50rpx;left:0rpx;right:0rpx'><text>场地预约</text></view>
+  <button class="button2" style='position:absolute;top:150rpx' bindtap='roomhandle'>讨论间预约</button>
+  <button class="button2" style='position:absolute;top:270rpx' bindtap='stagehandle'>活动室舞台区预约</button>
+  <button class="button2" style='position:absolute;top:390rpx' bindtap='bakinghandle'>烘焙室预约</button>
+  <text class="bottomtext" style='position:absolute;top:500rpx'>*烘焙室预约仅对致仁烘焙室成员开放</text>
+</view>
+

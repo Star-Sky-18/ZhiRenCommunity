@@ -18,3 +18,8 @@
 #t{
   font-size: 28rpx
 }
+#draft{
+  font-size: 24rpx;
+  color: #292cbd;
+  text-decoration:underline;
+}

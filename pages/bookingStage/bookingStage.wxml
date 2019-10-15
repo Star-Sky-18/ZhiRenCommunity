@@ -1,6 +1,8 @@
 <!--pages/bookingStage/bookingStage.wxml-->
-<view class='title' style='position:relative;top:0rpx;left:0rpx;right:0rpx'><text>舞台预约记录</text></view>
-<text id='t' style='position:relative;top:0rpx;'>*以下记录按时间先后排序</text>
+<view>
+  <view class='title' style='position:relative;top:50rpx;left:0rpx;right:0rpx'><text>舞台预约记录</text></view>
+  <text id='t' style='position:relative;top:25px;'>*以下记录按时间先后排序</text>
+</view>
 <view class='container'>
   <block wx:for="{{act}}">
   <view class='container2'></view>
