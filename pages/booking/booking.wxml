@@ -10,7 +10,7 @@
     <view style='height:50rpx;width:700rpx;background-color:#ffffff'></view>
     <text class='smalltext'>讨论间{{i+1}} （2~4人讨论间）</text>
 
-    <image class='timetable' src='{{url}}/image/bookingImage/bI{{i+""+currentDay}}.png' ></image>
+    <image bindtap="book" data-number='{{i}}' class='timetable' src='{{url}}/image/bookingImage/bI{{i+""+currentDay}}.png' ></image>
 
     <view style='height:10rpx;width:700rpx;background-color:#ffffff'></view>
     <button bindtap='book' data-number='{{i}}'>立即预约</button>

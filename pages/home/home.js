@@ -80,23 +80,9 @@ Page({
       scrollTop: 0,
       duration: 300
     })
-    wx.showTabBarRedDot({
-      index: 0,
-    })
-    wx.hideTabBarRedDot({
-      index: 1,
-    })
-    wx.request({
-      url: app.globalData.serviceurl,
-      data: {
-        request: 'infoOfUser',
-        info:{
-          user: app.globalData.userInfo.nickName
-        }
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
+    wx.showModal({
+      title: '帮助',
+      content: '暂未开放',
     })
   },
   tapForRoom: function() {
@@ -106,7 +92,7 @@ Page({
   },
   tapForStage: function () {
     wx.navigateTo({
-      url: '../bookingStageDetail/bookingStageDetail',
+      url: '../bookingStage/bookingStage',
     })
   },
   tapForQuanyi: function () {

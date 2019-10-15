@@ -5,6 +5,7 @@
     "pages/logs2/logs2",
     "pages/me/me",
     "pages/bookingRoomDetail/bookingRoomDetail",
+    "pages/bookingStage/bookingStage",
     "pages/bookingStageDetail/bookingStageDetail",
     "pages/booking/booking",
     "pages/notice/notice",

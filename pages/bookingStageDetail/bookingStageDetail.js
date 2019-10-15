@@ -176,8 +176,8 @@ Page({
               showCancel: false,
               success(res) {
                 if (res.confirm) {
-                  wx.navigateBack({
-                    delta: 0,
+                  wx.navigateTo({
+                    url : '../home/home'
                   })
                 }
               }

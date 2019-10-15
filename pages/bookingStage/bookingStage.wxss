@@ -1,0 +1,41 @@
+/* pages/bookingStage/bookingStage.wxss */
+.title{
+  font-size: 50rpx;
+  font-weight: 900;
+  color: rgb(30, 145, 165);
+  text-align: center
+}
+#t{
+  font-size: 28rpx
+}
+.container{
+  padding: 20rpx
+}
+.container1{
+  background-color:#d6f3f1;
+  height: 200rpx;
+  width: 700rpx
+}
+.record{
+  color: #7c7c7c;
+  font-size: 35rpx;
+}
+.container2{
+  color: white;
+  width: 700rpx;
+  height: 40rpx;
+}
+.button2{
+  background: #adeeea;
+  border-color: #000000;
+  width: 700rpx;
+  height:105rpx;
+}
+.bottomtext{
+  color: #7c7c7c;
+  font-size: 20rpx
+}
+.cancel{
+  height: 100rpx;
+  width:650rpx
+}

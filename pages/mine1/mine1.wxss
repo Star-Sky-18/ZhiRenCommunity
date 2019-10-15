@@ -42,5 +42,5 @@
 }
 .cancel{
   height: 100rpx;
-  width:650rpx
+  width:400rpx;
 }

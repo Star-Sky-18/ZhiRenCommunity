@@ -1,8 +1,7 @@
-<!--pages/mine2/mine2.wxml-->
+<!--pages/bookingStage/bookingStage.wxml-->
+<view class='title' style='position:relative;top:0rpx;left:0rpx;right:0rpx'><text>舞台预约记录</text></view>
+<text id='t' style='position:relative;top:0rpx;'>*以下记录按时间先后排序</text>
 <view class='container'>
-  <image class="image"
-  src='{{url}}/image/record.jpg'>
-  </image>
   <block wx:for="{{act}}">
   <view class='container2'></view>
     <view class='container1'>
@@ -11,14 +10,11 @@
       <text wx:if="{{item.content.length<=15}}"class='record' decode="{{true}}" style='color:#b'>
       &nbsp;&nbsp;&nbsp;活动内容：{{item.content}}</text>
       <text wx:if="{{item.content.length>15}}"class='record' decode="{{true}}" style='color:#b'>
-      &nbsp;&nbsp;&nbsp;活动内容：{{item.content.slice(1,5)}}...</text><text class='record' decode="{{true}}" style='color:#b'>
-      &nbsp;&nbsp;&nbsp;姓名：{{item.name}}&nbsp;&nbsp;&nbsp;学号：{{item.studentNumber}}
-      </text>
-      <image id="{{item.timestamp}}" bindtap='cancelAppoint'class="cancel" src = "{{url}}/image/cancel.jpg"  style="position:relative ;left:200rpx"/>
+      &nbsp;&nbsp;&nbsp;活动内容：{{item.content.slice(1,15)}}...</text>
+      <text class='record' decode="{{true}}" style='color:#b'>
+      &nbsp;&nbsp;&nbsp;是否已被确认：{{item.argee?'是':'否'}}...</text>
     </view>
     </block>
-    <button class="button0" style='bottom:100rpx;right:0rpx'
-    bindtap='onScroll'>👆</button>
     <view class='container2'></view>
      <text class="bottomtext" >没有更多预约记录了呦~</text>
      <view class='container2'></view>

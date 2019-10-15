@@ -38,9 +38,10 @@
 }
 .bottomtext{
   color: #7c7c7c;
-  font-size: 20rpx
+  font-size: 20rpx;
 }
 .cancel{
+  align-items: center;
   height: 100rpx;
-  width:650rpx
+  width:400rpx
 }
