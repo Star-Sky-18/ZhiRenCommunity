@@ -1,4 +1,5 @@
 // pages/wpjy/wpjy.js
+const app = getApp()
 Page({
 
   /**

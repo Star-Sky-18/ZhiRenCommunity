@@ -3,7 +3,8 @@
   <block id="w" wx:if="{{hasUserInfo || canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
     <button bindtap='bindViewTap' class="button1" style='position:absolute;top:20rpx'>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" style='position:absolute;top:16rpx;left:44rpx'></image>
-      <text class="userinfo-nickname" style='position:absolute;top:50rpx;left:250rpx;'>{{userInfo.nickName}}</text>    
+      <text class="userinfo-nickname" style='position:absolute;top:57.5rpx;left:220rpx;'>{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname" style='position:absolute;top:57.5rpx;left:450rpx;'>我的记录</text>     
       <image class="image" src="right-arrow-white.png" style='position:absolute;top:69rpx;left:600rpx;'></image>
     </button>
   </block>

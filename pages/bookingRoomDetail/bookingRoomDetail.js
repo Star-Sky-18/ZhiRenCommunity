@@ -167,7 +167,7 @@ Page({
       },
       success: function (res) {
         console.log(res.data)
-        if (res.data) {
+        if (res.data.result) {
           wx.showModal({
             title: 'SUCCESS',
             content: '预约成功。',
@@ -175,17 +175,17 @@ Page({
             showCancel: false,
             success (res) {
               if (res.confirm) {
-                wx.navigateBack({
-                  delta: 2,
+                wx.navigateTo({
+                  url: '../home/home',
                 })
               }
             }
           })
         }
-        else {
+        else if (res.data.reason == 1) {
           wx.showModal({
             title: 'FAIL',
-            content: '该时段已被预约，请重新选择。',
+            content: "该时段已被预约，请重试。",
             showCancel: false
           })
           wx.request({
@@ -204,8 +204,22 @@ Page({
             endTimeArray: utils.setStopTime(startTimeArray[0].id + 1, app.globalData.disArray),
             startTimeIndex: 0,
             endTimeIndex: 0,
+          })    
+        }
+        else if (res.data.reason == 1) {
+          wx.showModal({
+            title: 'FAIL',
+            content: '您已达到预约次数上限，每人仅可预约一次同日的讨论间。',
+            confirmText: '返回',
+            showCancel: false,
+            success(res) {
+              if (res.confirm) {
+                wx.navigateTo({
+                  url: '../home/home',
+                })
+              }
+            }
           })
-          
         }
       },
       fail: function () {

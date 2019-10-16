@@ -1,1 +1,22 @@
 /* pages/quanyi/quanyi.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title{
+  font-size: 50rpx;
+  font-weight: 900;
+  color: rgb(30, 145, 165);
+  text-align: center
+}
+.section{
+  border: 4rpx solid  rgb(200, 200, 200);
+  background-color: rgb(241, 241, 241);
+}
+.text{
+  text-align: justify;
+}
+#b{
+  text-align: center
+}

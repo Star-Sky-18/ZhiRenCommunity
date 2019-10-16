@@ -20,7 +20,7 @@ Page({
       data: {
         request: 'infoOfUser',
         info: {
-          user: 'Star Sky'
+          user: app.globalData.userInfo.nickName
         }
       },
       success: function(res) {
@@ -50,7 +50,7 @@ Page({
       data: {
         request: 'infoOfUser',
         info: {
-          user: 'Star Sky'
+          user: app.globalData.userInfo.nickName
         }
       },
       success: function(res) {
@@ -122,7 +122,7 @@ Page({
               request: 'cancelAppoint',
               info: {
                 timestamp: e.currentTarget.id,
-                user: 'Star Sky'
+                user: app.globalData.userInfo.nickName
               }
             },
             success: function(res) {

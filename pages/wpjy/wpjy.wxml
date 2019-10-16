@@ -1,2 +1,4 @@
 <!--pages/wpjy/wpjy.wxml-->
-<text>pages/wpjy/wpjy.wxml</text>
+<view class="userinfo">
+  <view class='title' style='position:absolute;top:50rpx;left:0rpx;right:0rpx'><text>物品借用</text></view>
+</view>

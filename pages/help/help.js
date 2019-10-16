@@ -1,4 +1,5 @@
 // pages/help/help.js
+const app = getApp()
 Page({
 
   /**

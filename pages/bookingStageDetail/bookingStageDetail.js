@@ -14,7 +14,8 @@ Page({
     endDate: utils.addMonth(1),
     currentDate: '点击选择',
     currentStart: '点击选择',
-    currentEnd: '点击选择'
+    currentEnd: '点击选择',
+    imagelist: [app.globalData.serviceurl+'/image/draft.png']
   },
 
   /**
@@ -142,7 +143,7 @@ Page({
   },
   showdraft: function () {
     wx.previewImage({
-      urls: ['{{url}}image/draft.png'],
+      urls: this.data.imagelist,
     })
   },
   submit: function () {
@@ -180,7 +181,7 @@ Page({
           if (res.data) {
             wx.showModal({
               title: 'SUCCESS',
-              content: '预约成功，审核结果将会由邮箱或短信的形式通知，请耐心等待。',
+              content: '预约成功，审核结果将会在48小时内以邮箱或短信的形式通知，或者前往“我的”-“记录”-“舞台预约”中查询审核结果，请耐心等待。',
               confirmText: '返回上层',
               showCancel: false,
               success(res) {

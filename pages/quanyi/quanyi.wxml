@@ -1,2 +1,15 @@
 <!--pages/quanyi/quanyi.wxml-->
-<text>pages/quanyi/quanyi.wxml</text>
+<view class="userinfo">
+  <view class='title' style='position:absolute;top:50rpx;left:0rpx;right:0rpx'><text>权益通道</text></view>
+</view>
+<view style="position:absolute;top:150rpx">
+  <text class='text' style='position:relative;top:0rpx;left:30rpx;width:187.5rpx'>姓名：</text>
+  <textarea class='section' style='position:relative;top:-40rpx;left:142.5rpx;height:45rpx;width:450rpx' auto-height='true' placeholder='请输入姓名(必填)' placeholder-style="color:#c8c8c8;"  bindblur='contentBlur' focus="{{focus1}}" ></textarea>
+  <text class='text' style='position:relative;top:0rpx;left:30rpx;width:187.5rpx'>学号：</text>
+  <textarea class='section' style='position:relative;top:-40rpx;left:142.5rpx;height:45rpx;width:450rpx' auto-height='true' placeholder='请输入学号(必填)' placeholder-style="color:#c8c8c8;"  bindblur='contentBlur' focus="{{focus2}}" ></textarea>
+  <text class='text' style='position:relative;top:0rpx;left:30rpx;width:187.5rpx'>电话：</text>
+  <textarea class='section' style='position:relative;top:-40rpx;left:142.5rpx;height:45rpx;width:450rpx' auto-height='true' placeholder='请输入电话(必填)' placeholder-style="color:#c8c8c8;"  bindblur='contentBlur' focus="{{focus3}}" ></textarea>
+  <text class='text' style='position:relative;top:0rpx;left:30rpx;width:187.5rpx'>请输入反映的权益问题：</text>
+  <textarea class='section' style='position:relative;top:20rpx;left:142.5rpx;height:180rpx;width:450rpx' auto-height='true' placeholder='' placeholder-style="color:#c8c8c8;"  bindblur='contentBlur' focus="{{focus4}}" ></textarea>
+  <button id='b' bindtap='submit' style='position:relative;top:60rpx;left:147.5rpx;height:110rpx;width:325rpx'> 提交审核 Submit </button>
+</view>

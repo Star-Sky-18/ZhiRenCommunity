@@ -1,4 +1,5 @@
 // pages/quanyi/quanyi.js
+const app = getApp()
 Page({
 
   /**

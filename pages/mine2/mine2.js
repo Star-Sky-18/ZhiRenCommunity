@@ -20,7 +20,7 @@ Page({
       data: {
         request: 'infoOfUser',
         info: {
-          user: 'Star Sky'
+          user: app.globalData.userInfo.nickName
         }
       },
       success: function(res) {

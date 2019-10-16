@@ -1,4 +1,5 @@
 // pages/bakingroom/bakingroom.js
+const app = getApp()
 Page({
 
   /**
