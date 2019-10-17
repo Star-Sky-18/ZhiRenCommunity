@@ -173,11 +173,13 @@ Page({
             content: '预约成功。',
             confirmText: '返回',
             showCancel: false,
-            success (res) {
+            success:function (res) {
               if (res.confirm) {
-                wx.navigateTo({
-                  url: '../home/home',
+                wx.switchTab({
+                  url: '../home/home'
                 })
+              }else{
+                console.log(res.confirm)
               }
             }
           })
@@ -206,16 +208,16 @@ Page({
             endTimeIndex: 0,
           })    
         }
-        else if (res.data.reason == 1) {
+        else if (res.data.reason == 2) {
           wx.showModal({
             title: 'FAIL',
             content: '您已达到预约次数上限，每人仅可预约一次同日的讨论间。',
             confirmText: '返回',
             showCancel: false,
-            success(res) {
+            success:function(res) {
               if (res.confirm) {
-                wx.navigateTo({
-                  url: '../home/home',
+                wx.switchTab({
+                  url: '../home/home'
                 })
               }
             }
