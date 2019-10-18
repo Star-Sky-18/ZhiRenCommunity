@@ -13,30 +13,30 @@
     <image bindtap="book" data-number='{{i}}' class='timetable' src='{{url}}/image/bookingImage/bI{{i+""+currentDay}}.png' ></image>
 
     <view style='height:10rpx;width:700rpx;background-color:#ffffff'></view>
-    <button bindtap='book' data-number='{{i}}'>立即预约</button>
+    <button class="bookingbtn" bindtap='book' data-number='{{i}}'>立即预约</button>
   </block>
 
   <block wx:if='{{day1Picked}}'>
-    <button style='position: fixed; right: 10rpx; top: 10rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 10rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 110rpx;background-color:#72e4e4' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 85rpx;background-color:#72e4e4' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 210rpx;background-color:#72e4e4' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 160rpx;background-color:#72e4e4' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
   </block>
 
   <block wx:elif='{{day2Picked}}'>
-    <button style='position: fixed; right: 10rpx; top: 10rpx;background-color:#72e4e4' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 10rpx;background-color:#72e4e4' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 110rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 85rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 210rpx;background-color:#72e4e4' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 160rpx;background-color:#72e4e4' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
   </block>
 
   <block wx:elif='{{day3Picked}}'>
-    <button style='position: fixed; right: 10rpx; top: 10rpx;background-color:#72e4e4' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 10rpx;background-color:#72e4e4' bindtap='changeDay' data-number='0'>今天({{day1}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 110rpx;background-color:#72e4e4' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 85rpx;background-color:#72e4e4' bindtap='changeDay' data-number='1'>明天({{day2}})</button>
 
-    <button style='position: fixed; right: 10rpx; top: 210rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
+    <button class="daybtn" style='position: fixed; right: 10rpx; top: 160rpx;background-color:#d6f3f1' bindtap='changeDay' data-number='2'>后天({{day3}})</button>
   </block>
 </view>

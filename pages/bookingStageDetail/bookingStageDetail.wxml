@@ -1,6 +1,6 @@
 <!--pages/bookingStageDetail/bookingStageDetail.wxml-->
 <view class='title' style='position:absolute;top:50rpx;left:0rpx;right:0rpx'><text>舞台预约详情</text></view>
-<text style='position:absolute;top:150rpx;left:30rpx;'>预约日期：</text>
+<text class="text" style='position:absolute;top:150rpx;left:30rpx;'>预约日期：</text>
 <view class="section" style='position:absolute;top:150rpx;left:217.5rpx'>
   <picker mode='date' start='{{startDate}}' end='{{endDate}}' bindchange='datehandle'>
     <view class="picker">
@@ -8,8 +8,8 @@
     </view>
   </picker>
 </view>
-<text style='position:absolute;top:225rpx;left:30rpx;'>预约时间段：</text>
-<text style='position:absolute;top:300rpx;left:105rpx;'>开始时间:</text>
+<text class="text" style='position:absolute;top:225rpx;left:30rpx;'>预约时间段：</text>
+<text class="text" style='position:absolute;top:300rpx;left:105rpx;'>开始时间:</text>
 <view class="section" style='position:absolute;top:300rpx;left:292.5rpx;'>
   <picker mode="time" start='6:00' end='24:00' bindchange='starthandle'>
     <view class="picker">
@@ -17,7 +17,7 @@
     </view>
   </picker>
 </view>
-<text style='position:absolute;top:375rpx;left:105rpx;'>结束时间:</text>
+<text class="text" style='position:absolute;top:375rpx;left:105rpx;'>结束时间:</text>
 <view class="section" style='position:absolute;top:375rpx;left:292.5rpx;'>
   <picker mode="time" start='6:00' end='24:00' bindchange='endhandle'>
     <view class="picker">
@@ -42,14 +42,14 @@
   <textarea class='section' style='position:relative;top:-40rpx;left:217.5rpx;height:45rpx;width:450rpx' auto-height='true' placeholder='备注(选填)' placeholder-style="color:#c8c8c8;"  bindblur='remarkBlur' focus="{{focus7}}" ></textarea>
   <text id='t' style='position:relative;top:-40rpx;left:217.5rpx;height:45rpx;width:450rpx'>*如有对场地、桌椅等有要求，请详细备注。</text>
   <checkbox-group bindchange='projectorChange'>
-    <checkbox value='true' style='position:relative;top:-30rpx;left:30rpx'>是否需要使用投影仪</checkbox>
+    <checkbox class="text" value='true' style='position:relative;top:-30rpx;left:30rpx'>是否需要使用投影仪</checkbox>
   </checkbox-group>
   <checkbox-group bindchange='microphoneChange'>
-    <checkbox value='true' style='position:relative;top:-15rpx;left:30rpx'>是否需要使用麦克风</checkbox>
+    <checkbox class="text" value='true' style='position:relative;top:-15rpx;left:30rpx'>是否需要使用麦克风</checkbox>
   </checkbox-group>
     <checkbox-group bindchange='spaceChange'>
-    <checkbox value='true' style='position:relative;top:0rpx;left:30rpx'>是否需要使用活动室活动区</checkbox>
+    <checkbox class="text" value='true' style='position:relative;top:0rpx;left:30rpx'>是否需要使用活动室活动区</checkbox>
     <text id="draft" bindtap="showdraft" style='position:relative;top:0rpx;left:50rpx'>致仁活动室草图</text>
   </checkbox-group>
-  <button id='b' bindtap='submit' style='position:relative;top:0rpx;left:67.5rpx;height:110rpx;width:325rpx'> 提交审核 Submit </button>
+  <button id='b' bindtap='submit' style='position:relative;top:0rpx;left:67.5rpx;height:110rpx;width:400rpx'> 提交审核 Submit </button>
 </view>

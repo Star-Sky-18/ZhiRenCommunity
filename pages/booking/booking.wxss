@@ -39,3 +39,15 @@
   color: rgb(0, 0, 0);
   background-color: rgb(44, 36, 116);
 }
+.daybtn{
+  height: 75rpx;
+  width: 250rpx;
+  font-size: 30rpx;
+  align-items: center;
+}
+.bookingbtn{
+  height: 75rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  align-items: center;
+}

@@ -9,7 +9,8 @@
 .container1{
   background-color:#d6f3f1;
   height: 300rpx;
-  width: 700rpx
+  width: 700rpx;
+  border-radius: 75%
 }
 .record{
   color: #7c7c7c;
@@ -35,10 +36,15 @@
   border-color: #000000;
   width: 700rpx;
   height:150rpx;
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .bottomtext{
   color: #7c7c7c;
-  font-size: 20rpx
+  font-size: 24rpx
 }
 .cancel{
   height: 100rpx;

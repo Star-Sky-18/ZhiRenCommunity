@@ -8,15 +8,22 @@
 .section{
   border: 4rpx solid  rgb(200, 200, 200);
   background-color: rgb(241, 241, 241);
+  font-size: 30rpx
 }
 .text{
   text-align: justify;
+  font-size: 34rpx
 }
 #b{
-  text-align: center
+  text-align: center;
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #t{
-  font-size: 28rpx
+  font-size: 24rpx
 }
 #draft{
   font-size: 24rpx;
