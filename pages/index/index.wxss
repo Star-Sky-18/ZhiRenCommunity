@@ -32,5 +32,5 @@
 .container {
   background-position-y: -60rpx;
   background-size: 750rpx;
-  background-image: url('http://193.112.75.39:8860/image/zhiren1.png')
+  background-image: url('https://zhirenshequ.cn/image/zhiren1.png')
 }
