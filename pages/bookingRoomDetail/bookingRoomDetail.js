@@ -25,11 +25,6 @@ Page({
     date: date,
     result: result,
     num: result[1].obj + 1,
-    value1: '',
-    value2: '',
-    value3: '',
-    value4: '',
-    value5: ''
   },
   /**
    * 生命周期函数--监听页面加载
@@ -64,11 +59,6 @@ Page({
       date: date,
       result: result,
       num: result[1].obj + 1,
-      value1: '',
-      value2: '',
-      value3: '',
-      value4: '',
-      value5: ''
     })
   },
 
@@ -274,11 +264,6 @@ Page({
       startTimeIndex: 0,
       endTimeArray: utils.setStopTime(startTimeArray[0].id+1, app.globalData.disArray),
       endTimeIndex: 0,
-      value1: '',
-      value2: '',
-      value3: '',
-      value4: '',
-      value5: ''
     })
     result[2].obj = ''
     result[3].obj = startTimeArray[0].id
