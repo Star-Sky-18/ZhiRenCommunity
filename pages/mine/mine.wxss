@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 .button2{
-  background: #adeeea;
+  background: #d6f3f1;
   border-color: #000000;
   width: 700rpx;
   height:150rpx;
@@ -15,7 +15,7 @@
   width: 700rpx
 }
 .button0{
-  background: #3ab9b3;
+  background: #d6f3f1;
   margin-top: 1.6vw;
   margin-bottom: 0vw;
   display: flex;
