@@ -23,22 +23,22 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color": "#ffffff",
-    "selectedColor": "#000000",
+    "color": "#000000",
+    "selectedColor": "#ffffff",
     "backgroundColor": "#3ab9b3",
     "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "./images/home-1.png",
-        "selectedIconPath": "./images/home-2.png"
+        "iconPath": "./images/home-2.png",
+        "selectedIconPath": "./images/home-1.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我的",
-        "iconPath": "./images/me-1.png",
-        "selectedIconPath": "./images/me-2.png"
+        "iconPath": "./images/me-2.png",
+        "selectedIconPath": "./images/me-1.png"
       }
     ]
   }

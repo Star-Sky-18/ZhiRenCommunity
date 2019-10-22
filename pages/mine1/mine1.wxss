@@ -10,7 +10,7 @@
   background-color:#d6f3f1;
   height: 300rpx;
   width: 700rpx;
-  border-radius: 75%
+  border-radius: 15rpx
 }
 .record{
   color: #7c7c7c;
@@ -19,7 +19,7 @@
 .container2{
   color: white;
   width: 700rpx;
-  height: 30rpx; 
+  height: 30rpx;
 }
 .button0{
   background: #3ab9b3;
