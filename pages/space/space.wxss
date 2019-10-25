@@ -85,15 +85,9 @@
   width: 50%;
   background-color: white;
   color: black;
-  border-radius: 0%;
-  border-color: white;
-  border-top-color: gray;
 }
 #btn2{
   width: 50%;
   background-color: white;
   color: #616b8f;
-  border-radius: 0%;
-  border-color: white;
-  border-top-color: gray;
 }
