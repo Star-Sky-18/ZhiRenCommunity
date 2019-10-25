@@ -1,12 +1,13 @@
 // pages/space/space.js
 const app = getApp()
+var result
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    hidden: true
   },
 
   /**
@@ -75,13 +76,48 @@ Page({
     })
   },
   bakinghandle: function() {
+    var that = this
     wx.showModal({
       title: '温馨提示',
       content: '烘焙室预约功能仅对致仁烘焙室成员开放。',
       success(res) {
         if (res.confirm) {
+          that.setData({
+            hidden: false
+          })
+        }
+      }
+    })
+  },
+  passwordBlur: function (e) {
+    result = e.detail.value
+  },
+  cancel: function () {
+    this.setData({
+      hidden: true
+    })
+  },
+  confirm: function () {
+    wx.request({
+      url: app.globalData.serviceurl,
+      method: "POST",
+      data: {
+        request: "bakingroomPassword",
+        info: {
+          password: result,
+        }
+      },
+      success: function (res) {
+        if (res.data.result) {
           wx.navigateTo({
             url: '../bakingroom/bakingroom',
+          })
+        }
+        else {
+          wx.showModal({
+            title: '密码错误',
+            content: '点击“取消”退出当前界面,点击“重试”进行重试。',
+            confirmText: "重试",
           })
         }
       }

@@ -6,4 +6,15 @@
   <button class="button2" style='position:absolute;top:390rpx' bindtap='bakinghandle'>烘焙室预约</button>
   <text class="bottomtext" style='position:absolute;top:500rpx'>*烘焙室预约仅对致仁烘焙室成员开放</text>
 </view>
+<view id="box" hidden="{{hidden}}">
+  <view id="background"></view>
+  <view id="window">
+    <view id="titlebackground"><text id="titletext">PASSWORD</text></view>
+    <view id="boxcontent"><textarea id="password" placeholder="请输入密码" bindblur="passwordBlur"></textarea></view>
+    <view id="boxbtn">
+      <button id="btn1" bindtap="cancel">取消</button>
+      <button id="btn2" bindtap="confirm">确认</button>
+    </view>
+  </view>
+</view>
 
