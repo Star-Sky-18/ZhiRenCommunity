@@ -80,7 +80,7 @@ Page({
     wx.showModal({
       title: '温馨提示',
       content: '烘焙室预约功能仅对致仁烘焙室成员开放。',
-      success(res) {
+      success: function (res) {
         if (res.confirm) {
           that.setData({
             hidden: false
@@ -98,6 +98,7 @@ Page({
     })
   },
   confirm: function () {
+    var that = this
     wx.request({
       url: app.globalData.serviceurl,
       method: "POST",
@@ -118,6 +119,13 @@ Page({
             title: '密码错误',
             content: '点击“取消”退出当前界面,点击“重试”进行重试。',
             confirmText: "重试",
+            success: function (res){
+              if (!res.confirm){
+                that.setData({
+                  hidden: true
+                })
+              }
+            }
           })
         }
       }

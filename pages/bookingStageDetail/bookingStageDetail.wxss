@@ -7,8 +7,9 @@
 }
 .section{
   border: 4rpx solid  rgb(200, 200, 200);
-  background-color: rgb(241, 241, 241);
-  font-size: 30rpx
+  background-color: rgb(250, 250, 250);
+  font-size: 30rpx;
+  border-radius: 10rpx;
 }
 .text{
   text-align: justify;

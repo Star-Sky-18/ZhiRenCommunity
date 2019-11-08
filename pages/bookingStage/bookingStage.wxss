@@ -32,7 +32,7 @@
   height: 40rpx;
 }
 .button2{
-  background: #adeeea;
+  background: #d6f3f1;
   border-color: #000000;
   width: 700rpx;
   height:105rpx;
